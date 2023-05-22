@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hellthy Costs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hellthy Costs.</h1>
+      <form>
+        <div class="form-group">
+          <label for="product-name">Nombre del platillo:</label>
+          <input type="text" id="product-name" />
+        </div>
+        <div class="form-group">
+          <label for="product-type">Nombre del producto:</label>
+          <input type="text" id="product-type" />
+        </div>
+        <div class="form-group">
+          <label for="product-price">Precio del producto:</label>
+          <input type="number" id="product-price" min="0" step="0.01" />
+        </div>
+        <div class="form-group">
+          <label for="product-quantity">Cantidad utilizada (en gramos):</label>
+          <select id="product-quantity">
+            <option value="0.010">0.010 gr</option>
+            <option value="0.025">0.025 gr</option>
+            <option value="0.100">0.050 gr</option>
+            <option value="0.100">0.100 gr</option>
+            <option value="0.120">0.120 gr</option>
+            <option value="0.150">0.150 gr</option>
+            <option value="0.250">0.250 gr</option>
+            <option value="0.500">0.500 gr</option>
+            <option value="1.000">1.000 gr</option>
+            <option value="2.000">2.000 gr</option>
+          </select>
+        </div>
+        <button type="button" id="agregar-producto">Agregar producto</button>
+        <button type="button" id="calcular-costo">Calcular costo del platillo</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Platillo</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="product-table-body"></tbody>
+      </table>
+      <div id="costo-total"></div>
+      <div id="precio-sugerido"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
